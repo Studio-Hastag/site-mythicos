@@ -2,17 +2,39 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Roadmap MythicOS- Mises à jour 1.x</title>
+    <title>Roadmap MythicOS – Mises à jour 1.x</title>
     <link rel="icon" type="image/png" href="favicon2.png">
-
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        /* Cartes style KDE Plasma */
+        .roadmap-card {
+            background: #ffffff;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .roadmap-card img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .roadmap-card strong {
+            font-size: 1.1em;
+            color: #005bbb;
+        }
+    </style>
 </head>
 <body>
 
 <header>
     <nav>
         <img src="logo2.png" alt="Logo MythicOS" class="logo">
-
 
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -26,10 +48,18 @@
 <section class="page">
     <h1>Roadmap MythicOS 1.x</h1>
 
-    <ul>
-        <li><strong>1.1</strong> – Ajout de l'antivirus ClamAV</li>
-        <li><strong>1.2</strong> – Ajout du logiciel Blender</li>
-    </ul>
+    <!-- Carte ClamAV -->
+    <div class="roadmap-card">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f512.svg" alt="Sécurité">
+        <p><strong>1.1</strong> – Ajout de l'antivirus ClamAV</p>
+    </div>
+
+    <!-- Carte Blender -->
+    <div class="roadmap-card">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3a8.svg" alt="3D">
+        <p><strong>1.2</strong> – Ajout du logiciel Blender</p>
+    </div>
+
 </section>
 
 <footer>
@@ -38,7 +68,3 @@
 
 </body>
 </html>
-
-
-
-
