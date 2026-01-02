@@ -1,0 +1,56 @@
+📘 Manuel d'Installation Officiel : MythicOS Lucid Edition
+Édité par le Studio Hastag
+Version du document : 1.1 (Janvier 2026)
+1. Introduction au Projet
+MythicOS est une distribution conçue pour allier la puissance de la base Linux Mint à la beauté de l'environnement KDE Plasma. Ce système a été optimisé par le Studio Hastag pour être rapide, élégant et sécurisé dès le premier démarrage.
+2. Phase de Préparation (Avant l'installation)
+A. Spécifications Matérielles (Hardware)
+Pour garantir une expérience fluide, assurez-vous que votre PC respecte ces critères :
+ * Processeur : Architecture 64 bits, 2.0 GHz minimum (Dual-core ou plus).
+ * Mémoire vive (RAM) : 4 Go (8 Go recommandés pour le multitâche).
+ * Espace Stockage : 25 Go minimum (SSD fortement conseillé).
+ * Carte Graphique : Supportant l'accélération matérielle (pour les effets visuels KDE).
+B. Sauvegarde des données
+ATTENTION : L'installation d'un nouveau système peut effacer vos fichiers actuels. Sauvegardez vos documents, photos et vidéos sur un disque dur externe ou dans le Cloud avant de commencer.
+3. Création du Support d'Installation
+ * Téléchargement : Téléchargez l'image .iso depuis le site officiel de MythicOS.
+ * Logiciel de Flash : Téléchargez balenaEtcher (simple et universel) sur votre système actuel.
+ * Procédure :
+   * Insérez une clé USB vierge (8 Go minimum).
+   * Lancez balenaEtcher.
+   * Cliquez sur "Flash from file" et sélectionnez l'ISO de MythicOS.
+   * Cliquez sur "Select target" et choisissez votre clé USB.
+   * Cliquez sur "Flash!". Attendez la vérification finale.
+4. Démarrage (Boot) sur MythicOS
+ * Insertion : Laissez la clé USB branchée et éteignez le PC.
+ * Accès au BIOS/UEFI : Rallumez le PC et tapotez immédiatement la touche d'accès au menu de démarrage.
+   * Marques courantes : HP (F9), Dell (F12), ASUS (Esc ou F8), Lenovo (F12 ou bouton Novo).
+ * Sélection : Choisissez la ligne correspondant à votre clé USB (souvent indiquée comme "USB Device" ou "UEFI : Partition 1").
+ * Mode Live : Sélectionnez "Start MythicOS". Le système va charger une session de démonstration. Rien n'est encore installé sur votre disque à cette étape.
+5. Processus d'Installation Pas à Pas
+Une fois sur le bureau KDE Plasma de MythicOS, double-cliquez sur l'icône "Install MythicOS".
+Étape 1 : Langue et Clavier
+ * Choisissez "Français".
+ * Testez votre clavier dans la zone prévue (attention au placement du A et du Q pour vérifier l'AZERTY).
+Étape 2 : Préparation
+ * Cochez la case "Installer les codecs multimédias". Cela permettra de lire les vidéos MP4 et d'écouter de la musique sans souci technique.
+Étape 3 : Type d'installation (Crucial)
+ * Option 1 : Effacer le disque et installer MythicOS. Le logiciel s'occupe de tout. C'est l'option recommandée pour une installation propre.
+ * Option 2 : Installer à côté de (Dual-boot). Si vous voulez garder Windows, choisissez cette option. Une barre coulissante apparaîtra pour diviser l'espace entre les deux systèmes.
+Étape 4 : Où êtes-vous ?
+ * Sélectionnez votre zone géographique (ex: Paris) pour régler l'heure automatiquement.
+Étape 5 : Identité (Compte Utilisateur)
+ * Votre nom : Votre nom complet.
+ * Nom de l'ordinateur : Le nom qui apparaîtra sur le réseau (ex: pc-mythic).
+ * Nom d'utilisateur : En minuscules, sans espace.
+ * Mot de passe : Choisissez un mot de passe fort. Ce mot de passe vous sera demandé pour chaque mise à jour.
+6. Après l'Installation
+ * Redémarrage : Une fois le message "Installation terminée" affiché, cliquez sur "Redémarrer maintenant".
+ * Retrait de la clé : Le système vous demandera d'enlever la clé USB et d'appuyer sur Entrée.
+ * Premier lancement : Connectez-vous avec votre mot de passe.
+ * Mises à jour : Cliquez sur l'icône de bouclier dans la barre des tâches pour effectuer les premières mises à jour de sécurité de la base Mint.
+7. Aide et Support
+Si vous rencontrez un problème de driver (Wi-Fi ou Carte Graphique) :
+ * Allez dans le menu : Configuration du système > Gestionnaire de pilotes.
+ * MythicOS recherchera automatiquement le pilote propriétaire adapté.
+© 2026 Studio Hastag - Tous droits réservés. MythicOS est un projet indépendant.
