@@ -1,0 +1,1 @@
+console.log("MythicOS site loaded successfully.");
