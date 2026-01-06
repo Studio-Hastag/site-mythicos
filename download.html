@@ -19,6 +19,8 @@
             <li><a class="active" href="download.html">Téléchargement</a></li>
             <li><a href="roadmap.html">Roadmap</a></li>
             <li><a href="about.html">À propos</a></li>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+
         </ul>
     </nav>
 </header>
@@ -45,7 +47,30 @@
 <footer class="footer">
     <p>© 2026 MythicOS – Projet communautaire open‑source</p>
 </footer>
+<script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Charger le thème sauvegardé
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+        toggleBtn.textContent = "☀️";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+            toggleBtn.textContent = "☀️";
+        } else {
+            localStorage.setItem("theme", "light");
+            toggleBtn.textContent = "🌙";
+        }
+    });
+</script>
 
 </body>
 </html>
+
 
