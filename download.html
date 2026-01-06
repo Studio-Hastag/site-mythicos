@@ -8,11 +8,14 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <img src="logo2.png" alt="Logo MythicOS" class="logo">
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="logo2.png" alt="Logo MythicOS" class="logo">
+            <span class="brand">MythicOS</span>
+        </div>
 
-        <ul>
+        <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
             <li><a class="active" href="download.html">Téléchargement</a></li>
             <li><a href="roadmap.html">Roadmap</a></li>
@@ -21,23 +24,27 @@
     </nav>
 </header>
 
-<section class="page">
+<section class="page download-page">
     <h1>Télécharger MythicOS</h1>
-    <p>Version actuelle : <strong>Édition Lucid – Février 2026</strong></p>
-
-    <!-- Bouton ISO -->
-    <a class="btn" href="#">Télécharger l'édition Lucid</a>
-
-    <h2>Guide d'installation</h2>
-    <p>
-        <a class="btn" href="install-mythic.pdf" target="_blank">
-            Ouvrir le guide PDF
-        </a>
+    <p class="version-info">
+        Version actuelle : <strong>Édition Lucid – Février 2026</strong>
     </p>
+
+    <div class="download-block">
+        <h2>Image ISO</h2>
+        <p>Téléchargez l’image ISO officielle de MythicOS pour installation.</p>
+        <a class="btn" href="#">Télécharger l'édition Lucid</a>
+    </div>
+
+    <div class="download-block">
+        <h2>Guide d'installation</h2>
+        <p>Consultez le guide complet pour installer MythicOS étape par étape.</p>
+        <a class="btn" href="install-mythic.pdf" target="_blank">Ouvrir le guide PDF</a>
+    </div>
 </section>
 
-<footer>
-    <p>© 2026 MythicOS</p>
+<footer class="footer">
+    <p>© 2026 MythicOS – Projet communautaire open‑source</p>
 </footer>
 
 </body>
