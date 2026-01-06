@@ -1,27 +1,28 @@
+/* PALETTE MINT */
 :root {
-    --plasma-blue: #3daee9;      /* Bleu Plasma officiel */
-    --plasma-bg: #eff0f1;        /* Fond clair Breeze */
-    --plasma-card: #ffffff;      /* Fond des fenêtres */
-    --plasma-text: #232629;      /* Texte sombre Breeze */
-    --plasma-border: #bcbebf;    /* Bordures fines */
-    --radius: 12px;              /* Arrondis style KDE */
+    --mint-green: #87c095;       /* Vert Mint principal */
+    --mint-green-dark: #6aa87a;  /* Variante foncée */
+    --mint-bg: #f5f7f5;          /* Fond très clair */
+    --mint-card: #ffffff;        /* Cartes / sections */
+    --mint-text: #2e3436;        /* Texte sombre */
+    --mint-border: #d8ddd8;      /* Bordures douces */
+    --radius: 10px;              /* Arrondis légers façon Mint */
 }
 
+/* GLOBAL */
 body {
     margin: 0;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: linear-gradient(135deg, #e0e2e4 0%, #eff0f1 100%);
-    color: var(--plasma-text);
+    background: var(--mint-bg);
+    color: var(--mint-text);
     min-height: 100vh;
 }
 
-/* HEADER STYLE PANNEAU PLASMA */
+/* HEADER Mint-like */
 header {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px); /* Effet de flou KDE */
-    -webkit-backdrop-filter: blur(12px);
-    padding: 10px 40px;
-    border-bottom: 1px solid var(--plasma-border);
+    background: #ffffff;
+    border-bottom: 1px solid var(--mint-border);
+    padding: 12px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -36,106 +37,123 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 nav a {
-    color: var(--plasma-text);
+    color: var(--mint-text);
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 16px;
+    padding: 8px 14px;
     border-radius: var(--radius);
-    transition: all 0.2s ease;
+    transition: 0.2s ease;
 }
 
 nav a:hover {
-    background: rgba(61, 174, 233, 0.1);
-    color: var(--plasma-blue);
+    background: rgba(135, 192, 149, 0.15);
+    color: var(--mint-green-dark);
 }
 
 nav a.active {
-    background: var(--plasma-blue);
+    background: var(--mint-green);
     color: white;
-    box-shadow: 0 4px 10px rgba(61, 174, 233, 0.3);
+    box-shadow: 0 3px 8px rgba(135, 192, 149, 0.4);
 }
 
-/* LOGO AVEC ANIMATION DE LUEUR */
+/* LOGO (sans glow KDE) */
 .logo {
-    height: 45px;
+    height: 42px;
     width: auto;
-    transition: transform 0.3s ease;
-    animation: logoPulse 2s infinite ease-in-out;
+    transition: transform 0.2s ease;
 }
 
 .logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* SECTION PAGE (Style Fenêtre d'application) */
-.page {
-    max-width: 900px;
-    margin: 40px auto;
-    background: var(--plasma-card);
-    padding: 40px;
-    border-radius: var(--radius);
-    border: 1px solid var(--plasma-border);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    animation: plasmaFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f5f0 100%);
 }
 
-/* BOUTON STYLE "BREEZE" */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    opacity: 0.85;
+}
+
+/* BOUTON Mint */
 .btn {
-    background: var(--plasma-blue);
-    padding: 12px 25px;
+    background: var(--mint-green);
+    padding: 12px 28px;
     color: white;
     text-decoration: none;
     border-radius: var(--radius);
     font-weight: bold;
     display: inline-block;
-    border: 1px solid rgba(0,0,0,0.1);
-    transition: all 0.3s;
+    transition: 0.25s ease;
 }
 
 .btn:hover {
-    background: #2980b9;
-    box-shadow: 0 5px 15px rgba(61, 174, 233, 0.4);
+    background: var(--mint-green-dark);
+    box-shadow: 0 6px 18px rgba(135, 192, 149, 0.35);
     transform: translateY(-2px);
+}
+
+/* FEATURES (cartes Mint) */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: var(--mint-card);
+    padding: 25px;
+    border-radius: var(--radius);
+    border: 1px solid var(--mint-border);
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* INTRO SECTION */
+.intro {
+    max-width: 900px;
+    margin: 60px auto;
+    background: var(--mint-card);
+    padding: 40px;
+    border-radius: var(--radius);
+    border: 1px solid var(--mint-border);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.intro h2 {
+    margin-top: 0;
+    font-size: 2rem;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 30px;
-    color: #7f8c8d;
+    color: #6c7a6c;
     font-size: 0.9rem;
+    margin-top: 40px;
 }
-
-/* ANIMATIONS */
-
-@keyframes plasmaFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes logoPulse {
-    0% { filter: drop-shadow(0 0 0px rgba(61, 174, 233, 0)); }
-    50% { filter: drop-shadow(0 0 12px rgba(61, 174, 233, 0.6)); }
-    100% { filter: drop-shadow(0 0 0px rgba(61, 174, 233, 0)); }
-}
-
-/* Effet pour les cartes optionnelles */
-.feature {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
- 
