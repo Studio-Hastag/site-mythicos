@@ -7,36 +7,69 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <style>
-        /* Cartes style KDE Plasma */
+        /* TIMELINE VERTICALE MINT */
+        .roadmap-container {
+            position: relative;
+            margin: 40px auto;
+            padding-left: 25px;
+            border-left: 3px solid #87c095; /* Vert Mint */
+            max-width: 800px;
+        }
+
+        /* Carte Mint */
         .roadmap-card {
             background: #ffffff;
             padding: 20px;
-            margin: 15px 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin: 25px 0;
+            border-radius: 10px;
+            border: 1px solid #d8ddd8;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
             display: flex;
             align-items: center;
             gap: 15px;
+            position: relative;
+        }
+
+        /* Point de la timeline */
+        .roadmap-card::before {
+            content: "";
+            position: absolute;
+            left: -34px;
+            top: 22px;
+            width: 14px;
+            height: 14px;
+            background: #87c095;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #87c095;
         }
 
         .roadmap-card img {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
         }
 
         .roadmap-card strong {
-            font-size: 1.1em;
-            color: #005bbb;
+            font-size: 1.2em;
+            color: #6aa87a; /* Vert Mint foncé */
+        }
+
+        .roadmap-title {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            color: #2e3436;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <img src="logo2.png" alt="Logo MythicOS" class="logo">
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="logo2.png" alt="Logo MythicOS" class="logo">
+        </div>
 
-        <ul>
+        <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="download.html">Téléchargement</a></li>
             <li><a class="active" href="roadmap.html">Roadmap</a></li>
@@ -47,23 +80,29 @@
 
 <section class="page">
     <h1>Roadmap MythicOS 1.x</h1>
+    <p>Découvrez les évolutions prévues pour la branche 1.x de MythicOS.</p>
 
-    <!-- Carte ClamAV -->
-    <div class="roadmap-card">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f512.svg" alt="Sécurité">
-        <p><strong>1.1</strong> – Ajout de l'antivirus ClamAV</p>
+    <div class="roadmap-container">
+
+        <!-- Version 1.1 -->
+        <h2 class="roadmap-title">Version 1.1 – Sécurité & Stabilité</h2>
+        <div class="roadmap-card">
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f512.svg" alt="Sécurité">
+            <p><strong>1.1</strong> – Ajout de l'antivirus ClamAV</p>
+        </div>
+
+        <!-- Version 1.2 -->
+        <h2 class="roadmap-title">Version 1.2 – Création & Multimédia</h2>
+        <div class="roadmap-card">
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3a8.svg" alt="3D">
+            <p><strong>1.2</strong> – Ajout du logiciel Blender</p>
+        </div>
+
     </div>
-
-    <!-- Carte Blender -->
-    <div class="roadmap-card">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3a8.svg" alt="3D">
-        <p><strong>1.2</strong> – Ajout du logiciel Blender</p>
-    </div>
-
 </section>
 
-<footer>
-    <p>© 2026 MythicOS</p>
+<footer class="footer">
+    <p>© 2026 MythicOS – Projet communautaire open‑source</p>
 </footer>
 
 </body>
