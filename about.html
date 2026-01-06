@@ -6,13 +6,86 @@
     <title>À propos | MythicOS</title>
     <link rel="icon" type="image/png" href="favicon2.png">
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        /* HERO Mint */
+        .about-hero {
+            text-align: center;
+            padding: 80px 20px 50px;
+            background: linear-gradient(180deg, #ffffff 0%, #f0f5f0 100%);
+        }
+
+        .about-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Carte principale */
+        .about-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 10px;
+            border: 1px solid #d8ddd8;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.7;
+        }
+
+        .about-card strong {
+            color: #6aa87a; /* Mint foncé */
+        }
+
+        /* Valeurs */
+        .values {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 50px auto;
+            max-width: 900px;
+        }
+
+        .value-box {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #d8ddd8;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            width: 260px;
+            text-align: center;
+        }
+
+        .value-box h3 {
+            margin-top: 0;
+            color: #6aa87a;
+        }
+
+        /* Signature */
+        .studio-tag {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <img src="logo2.png" alt="Logo MythicOS" class="logo">
-        <ul>
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="logo2.png" alt="Logo MythicOS" class="logo">
+        </div>
+
+        <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="download.html">Téléchargement</a></li>
             <li><a href="roadmap.html">Roadmap</a></li>
@@ -21,20 +94,45 @@
     </nav>
 </header>
 
-<section class="page">
-    <h1>Pourquoi MythicOS ?</h1>
-    
-    <div class="content-about">
-        <p>"Nous pensons que votre système d'exploitation ne doit pas être un obstacle, mais un outil qui s'adapte à vous. En combinant la stabilité légendaire d'une base Linux solide et la beauté infinie de l'environnement <strong>KDE Plasma</strong>, nous créons <strong>MythicOS Lucid Edition</strong>."</p>
-        
-        <p><em>Un système simple par défaut, mais sans aucune limite pour ceux qui veulent créer.</em></p>
-    </div>
-    
-    <p class="studio-tag">Une création du <strong>Studio Hastag</strong>.</p>
+<!-- HERO -->
+<section class="about-hero">
+    <h1>À propos de MythicOS</h1>
+    <p>Une distribution Linux moderne, élégante et pensée pour s’adapter à chaque utilisateur.</p>
 </section>
 
-<footer>
-    <p>© 2026 MythicOS</p>
+<!-- Carte principale -->
+<section class="about-card">
+    <p>
+        « Nous pensons que votre système d'exploitation ne doit pas être un obstacle, mais un outil qui s'adapte à vous.
+        En combinant la stabilité légendaire d'une base Linux solide et la beauté infinie de l'environnement
+        <strong>KDE Plasma</strong>, nous créons <strong>MythicOS Lucid Edition</strong>. »
+    </p>
+
+    <p><em>Un système simple par défaut, mais sans aucune limite pour ceux qui veulent créer.</em></p>
+</section>
+
+<!-- Valeurs -->
+<section class="values">
+    <div class="value-box">
+        <h3>✨ Simplicité</h3>
+        <p>Une interface claire, cohérente et agréable, pensée pour être immédiatement accessible.</p>
+    </div>
+
+    <div class="value-box">
+        <h3>⚙️ Puissance</h3>
+        <p>Des outils modernes, un environnement personnalisable et une base Linux robuste.</p>
+    </div>
+
+    <div class="value-box">
+        <h3>🌿 Élégance</h3>
+        <p>Un design soigné, inspiré par la philosophie du minimalisme et du confort visuel.</p>
+    </div>
+</section>
+
+<p class="studio-tag">Une création du <strong>Studio Hastag</strong>.</p>
+
+<footer class="footer">
+    <p>© 2026 MythicOS – Projet communautaire open‑source</p>
 </footer>
 
 </body>
