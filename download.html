@@ -21,7 +21,6 @@
             <li><a href="about">À propos</a></li>
             <li><a href="https://informatique.hastag.fr">Retour à l'acueil informatique</a></li>
             <button id="theme-toggle" class="theme-btn">🌙</button>
-
         </ul>
     </nav>
 </header>
@@ -29,30 +28,70 @@
 <section class="page download-page">
     <h1>Télécharger MythicOS</h1>
     <p class="version-info">
-        Version actuelle : <strong>Édition Lucid – Février 2026</strong>
+        Version actuelle : MythicOS 1.0 "Lucid"
     </p>
 
-    <div class="download-block">
-        <h2>Image ISO</h2>
-        <p>Téléchargez l’image ISO officielle de MythicOS pour installation.</p>
-        <a class="btn" href="#">Télécharger l'édition Lucid</a>
+    <!-- SECTION DES ÉDITIONS -->
+    <div class="edition-list">
+
+        <!-- ÉDITION CINNADE -->
+        <div class="edition-card">
+            <h2>MythicOS Cinnade</h2>
+            <p>
+                L’édition principale de MythicOS.  
+                Basée sur KWin + Nemo + le panneau Cinnade développé par Studio Hastag.  
+                Moderne, élégante et optimisée pour les PC récents.
+            </p>
+
+            <ul class="edition-features">
+                <li>Gestionnaire de fenêtres : KWin</li>
+                <li>Gestionnaire de fichiers : Nemo</li>
+                <li>Panneau Cinnade (Python + Qt)</li>
+                <li>Wayland optimisé</li>
+                <li>Expérience moderne et fluide</li>
+            </ul>
+
+            <a class="btn" href="#">Télécharger l'édition Cinnade</a>
+        </div>
+
+        <!-- ÉDITION XFCE -->
+        <div class="edition-card">
+            <h2>MythicOS XFCE</h2>
+            <p>
+                L’édition légère de MythicOS.  
+                Parfaite pour les anciens ordinateurs ou les utilisateurs recherchant une interface simple et rapide.
+            </p>
+
+            <ul class="edition-features">
+                <li>Environnement XFCE 4</li>
+                <li>Ultra léger et très stable</li>
+                <li>Idéal pour les PC anciens</li>
+                <li>Interface simple pour débutants</li>
+                <li>Compatible Word Online et OnlyOffice</li>
+            </ul>
+
+            <a class="btn" href="#">Télécharger l'édition XFCE</a>
+        </div>
+
     </div>
 
+    <!-- GUIDE D'INSTALLATION -->
     <div class="download-block">
         <h2>Guide d'installation</h2>
         <p>Consultez le guide complet pour installer MythicOS étape par étape.</p>
         <a class="btn" href="install-mythic.pdf" target="_blank">Ouvrir le guide PDF</a>
     </div>
+
 </section>
 
 <footer class="footer">
     <p>© 2026 MythicOS – Projet communautaire open‑source</p>
 </footer>
+
 <script>
     const toggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Charger le thème sauvegardé
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark");
         toggleBtn.textContent = "☀️";
@@ -73,8 +112,3 @@
 
 </body>
 </html>
-
-
-
-
-
