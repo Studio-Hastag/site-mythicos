@@ -301,7 +301,7 @@ body.dark .edition-features li {
 .edition-card .btn:hover {
     background: #003fcc;
 }
-/* --- MENU DÉROULANT (VERSION CORRIGÉE) --- */
+/* --- MENU DÉROULANT (VERSION CLIC, STABLE) --- */
 
 .navbar .dropdown {
     position: relative;
@@ -312,13 +312,13 @@ body.dark .edition-features li {
     padding: 8px 14px;
     border-radius: var(--radius);
     transition: 0.2s ease;
+    display: inline-block;
 }
 
-/* Le menu doit être collé au bouton */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* Collé juste en dessous */
+    top: 100%; /* collé sous le bouton */
     left: 0;
     background: var(--mint-card);
     border-radius: 8px;
@@ -326,11 +326,10 @@ body.dark .edition-features li {
     list-style: none;
     padding: 10px 0;
     min-width: 200px;
-    margin-top: 0; /* IMPORTANT : évite l’espace qui fait disparaître le menu */
+    margin-top: 4px;
     z-index: 1000;
 }
 
-/* Mode sombre */
 body.dark .dropdown-menu {
     background: #2a2c2a;
     box-shadow: 0 4px 12px rgba(255,255,255,0.05);
@@ -356,8 +355,7 @@ body.dark .dropdown-menu li a:hover {
     background: rgba(135, 192, 149, 0.25);
 }
 
-/* Le menu reste ouvert tant que la souris est dessus */
-.dropdown:hover .dropdown-menu,
-.dropdown-menu:hover {
+/* affichage quand la classe .open est présente */
+.dropdown.open .dropdown-menu {
     display: block;
 }
