@@ -359,3 +359,61 @@ body.dark .dropdown-menu li a:hover {
 .dropdown.open .dropdown-menu {
     display: block;
 }
+/* ============================
+   RESPONSIVE DESIGN (MOBILE)
+   ============================ */
+
+/* --- NAVBAR --- */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        padding: 0;
+    }
+
+    .nav-links li,
+    .nav-links a,
+    .nav-links button {
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: 5px;
+    }
+}
+
+/* --- HERO --- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* --- FEATURES / CARDS --- */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center
