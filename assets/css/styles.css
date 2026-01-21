@@ -301,7 +301,7 @@ body.dark .edition-features li {
 .edition-card .btn:hover {
     background: #003fcc;
 }
-/* --- MENU DÉROULANT --- */
+/* --- MENU DÉROULANT (VERSION CORRIGÉE) --- */
 
 .navbar .dropdown {
     position: relative;
@@ -309,48 +309,55 @@ body.dark .edition-features li {
 
 .dropdown-btn {
     cursor: pointer;
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    transition: 0.2s ease;
 }
 
+/* Le menu doit être collé au bouton */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 100%; /* Collé juste en dessous */
     left: 0;
-    background: var(--card-bg, #fff);
+    background: var(--mint-card);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     list-style: none;
     padding: 10px 0;
     min-width: 200px;
+    margin-top: 0; /* IMPORTANT : évite l’espace qui fait disparaître le menu */
     z-index: 1000;
 }
 
+/* Mode sombre */
 body.dark .dropdown-menu {
-    background: #1e1e1e;
+    background: #2a2c2a;
     box-shadow: 0 4px 12px rgba(255,255,255,0.05);
 }
 
 .dropdown-menu li a {
     display: block;
     padding: 10px 15px;
-    color: var(--text-color, #333);
+    color: var(--mint-text);
     text-decoration: none;
     transition: background 0.2s ease;
 }
 
 body.dark .dropdown-menu li a {
-    color: #ddd;
+    color: #e6e6e6;
 }
 
 .dropdown-menu li a:hover {
-    background: rgba(0,0,0,0.05);
+    background: rgba(135, 192, 149, 0.15);
 }
 
 body.dark .dropdown-menu li a:hover {
-    background: rgba(255,255,255,0.08);
+    background: rgba(135, 192, 149, 0.25);
 }
 
-/* Affichage au survol */
-.dropdown:hover .dropdown-menu {
+/* Le menu reste ouvert tant que la souris est dessus */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
     display: block;
 }
