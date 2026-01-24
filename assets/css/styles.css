@@ -417,3 +417,109 @@ body.dark .dropdown-menu li a:hover {
     .features {
         flex-direction: column;
         align-items: center
+/* ============================
+   CENTRAGE DES NOUVELLES SECTIONS
+   ============================ */
+
+/* Section globale */
+.editions,
+.highlights,
+.screenshots,
+.community,
+.news {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Titres */
+.editions h2,
+.highlights h2,
+.screenshots h2,
+.community h2,
+.news h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Sous‑texte */
+.editions p,
+.highlights p,
+.screenshots p,
+.community p,
+.news p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    opacity: 0.85;
+}
+
+/* ============================
+   GRILLES
+   ============================ */
+
+/* Grille des éditions */
+.edition-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Grille des highlights */
+.highlight-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Grille des screenshots */
+.screenshot-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.screenshot-grid img {
+    width: 300px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Grille des news */
+.news-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    background: var(--mint-card);
+    border: 1px solid var(--mint-border);
+    border-radius: var(--radius);
+    padding: 20px;
+    width: 320px;
+    text-align: left;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+body.dark .news-item {
+    background: #2a2c2a;
+    border-color: #3a3d3a;
+}
+
+/* ============================
+   CARTES DES ÉDITIONS
+   ============================ */
+
+.edition-card {
+    text-align: center;
+}
+
+.edition-card img {
+    width: 120px;
+    margin-bottom: 15px;
+}
