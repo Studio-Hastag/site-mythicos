@@ -8,30 +8,82 @@
 <body>
 
 <header class="header">
-    <!-- ta navbar ici -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="../logo2.png" alt="Logo MythicOS" class="logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index">Accueil</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">Téléchargement ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../download">Toutes les éditions</a></li>
+                    <li><a href="../edition-cinnade">MythicOS Cinnade</a></li>
+                    <li><a href="../edition-xfce">MythicOS XFCE</a></li>
+                </ul>
+            </li>
+
+            <li><a href="../roadmap">Roadmap</a></li>
+            <li><a href="../about">À propos</a></li>
+            <li><a href="../blog">Blog</a></li>
+            <li><a href="https://informatique.hastag.fr">Retour à l'accueil informatique</a></li>
+
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </ul>
+    </nav>
 </header>
 
 <section class="blog-article">
     <h1>MythicOS 1.0 – Préparation du lancement</h1>
-    <span class="date">Publié le 24 janvier 2026</span>
+    <span class="date">Publié le 20 janvier 2026</span>
 
     <p>
-        Le développement de MythicOS 1.0 avance rapidement. Nous finalisons les dernières optimisations,
-        les tests de stabilité et la documentation avant la sortie officielle.
+        Le développement de <strong>MythicOS 1.0</strong> entre dans sa phase finale. Après plusieurs mois
+        de travail sur la structure du système, les scripts de session, les métapaquets et la
+        reproductibilité des builds, nous approchons de la première version stable.
     </p>
 
     <p>
-        Cette version inclura l’édition Cinnade, l’édition XFCE, un installeur amélioré et un système
-        de mises à jour plus fiable.
+        L’objectif de MythicOS 1.0 est clair : proposer une distribution <strong>simple, propre et
+        cohérente</strong>, capable d’offrir une expérience moderne tout en restant légère et accessible.
+        Cette version se concentre sur la stabilité, la cohérence visuelle et la facilité d’utilisation.
+    </p>
+
+    <h2>Ce qui est déjà prêt</h2>
+    <ul>
+        <li>Le système de build reproductible</li>
+        <li>Les métapaquets pour Cinnade et XFCE</li>
+        <li>Les scripts de session personnalisés</li>
+        <li>Le panneau Cinnade et ses configurations</li>
+        <li>La documentation de base</li>
+        <li>La structure du site officiel</li>
+    </ul>
+
+    <h2>Ce qui reste à finaliser</h2>
+    <ul>
+        <li>Les derniers tests d’installation</li>
+        <li>La validation des performances sur plusieurs machines</li>
+        <li>La finalisation des logos et de l’identité visuelle</li>
+        <li>La rédaction des guides utilisateurs</li>
+        <li>La préparation des ISO finales</li>
+    </ul>
+
+    <p>
+        La sortie de MythicOS 1.0 marquera le début d’un cycle de versions régulières, chacune
+        apportant des améliorations ciblées et documentées. Le projet continuera d’évoluer avec une
+        philosophie simple : <strong>clarté, stabilité, reproductibilité</strong>.
     </p>
 
     <a href="../blog.html" class="btn">← Retour au blog</a>
 </section>
+
+<!-- Script dark mode -->
 <script>
     const toggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Charger le thème sauvegardé
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark");
         toggleBtn.textContent = "☀️";
